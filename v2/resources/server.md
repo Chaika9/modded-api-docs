@@ -111,7 +111,9 @@ Stop a server. Returns `204 No Content` on success.
 ## Reset Server
 **POST** `/servers/{server.id}/reset`
 
-Reset a server (is **permanently**). Returns `204 No Content` on success.
+Reset a server. Returns `204 No Content` on success.
+
+> This is **permanent** and cannot be undone!
 
 ## Get Server Member
 **GET** `/servers/{server.id}/members/{user.id}`
