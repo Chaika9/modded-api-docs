@@ -17,6 +17,8 @@
 | access_type               | integer  | [server Access Type](#server-access-type)                                                                                        |
 | approximate_online_count? | integer  | approximate number of online players in this server, returned from the `GET /servers/<id>` endpoint when `with_counts` is `true` |
 | nsfw_level                | integer  | [server NSFW level](#server-nsfw-level)                                                                                          |
+| expired                   | boolean  | true if this server is expired                                                                                                   |
+| expire_time               | long     | server expiration date (UNIX time)                                                                                               |
 
 #### Server Type
 
@@ -28,12 +30,12 @@
 
 #### Server Access Type
 
-| VALUE | NAME      | DESCRIPTION                                                            |
-|:------|:----------|:-----------------------------------------------------------------------|
-| 0     | OFFICIAL  | Modded Official server                                                 |
-| 1     | PRIVATE   | Access is restricted to only members of the server                     |
-| 2     | PUBLIC    | Access is unrestricted                                                 |
-| 3     | PROTECTED | Access is restricted to only members of the server and acces by portal |
+| VALUE | NAME      | DESCRIPTION                                                             |
+|:------|:----------|:------------------------------------------------------------------------|
+| 0     | OFFICIAL  | Modded Official server                                                  |
+| 1     | PRIVATE   | Access is restricted to only members of the server                      |
+| 2     | PUBLIC    | Access is unrestricted                                                  |
+| 3     | PROTECTED | Access is restricted to only members of the server and access by portal |
 
 #### Server NSFW Level
 
@@ -54,7 +56,9 @@
   "type": 2,
   "network": true,
   "access_type": 1,
-  "nsfw_level": 0
+  "nsfw_level": 0,
+  "expired": false,
+  "expire_time": 1662659768000
 }
 ```
 
@@ -89,7 +93,7 @@ Modify a server's settings. Returns the updated [server](#server-object) object 
 | FIELD                     | TYPE     | DESCRIPTION                                                               |
 |:--------------------------|:---------|:--------------------------------------------------------------------------|
 | id                        | string   | server id                                                                 |
-| name                      | string   | server name (2-100 characters, excluding trailing and leading whitespace) |
+| name                      | string   | server name (2-25 characters, excluding trailing and leading whitespace)  |
 | description               | string   | the description of a server (0-1024 characters)                           |
 | banner                    | integer  | banner id                                                                 |
 | nsfw_level                | integer  | [server NSFW level](#server-nsfw-level)                                   |
@@ -119,9 +123,7 @@ Returns a server [member](#server-member-object) object for the specified user.
 
 Returns a list of server [member](#server-member-object) objects that are members of the server.
 
-```
-All parameters to this endpoint are optional
-```
+> All parameters to this endpoint are optional
 
 #### Query String Params
 

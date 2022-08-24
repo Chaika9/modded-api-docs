@@ -21,6 +21,8 @@ Modded exposes different versions of our API. You should specify which version t
 
 ## Error Messages
 
+> Only for Modded API v2
+
 #### Request Error
 
 ```

@@ -4,20 +4,20 @@
 
 #### Server Structure
 
-| FIELD                     | TYPE     | DESCRIPTION |
-|:--------------------------|:---------|:------------|
-| id                        | string   | server id   |
+| FIELD                     | TYPE     | DESCRIPTION                                                              |
+|:--------------------------|:---------|:-------------------------------------------------------------------------|
+| id                        | string   | server id                                                                |
 | name                      | string   | server name (2-25 characters, excluding trailing and leading whitespace) |
-| description               | string   | the description of a server (0-1024 characters) |
-| bannerId                  | integer  | banner id |
-| ownerId                   | string   | id of owner |
-| type                      | string   | [server type](#server-type) |
-| isInNetwork               | boolean  | true if the server is in modded network |
-| accessType                | string   | [server Access Type](#server-access-type) |
-| status                    | string   | approximate number of online players in this server |
-| onlinePlayers             | integer  | approximate number of online players in this server |
-| isExpired                 | boolean  |  |
-| expireTime                | integer  |  |
+| description               | string   | the description of a server (0-1024 characters)                          |
+| bannerId                  | integer  | banner id                                                                |
+| ownerId                   | string   | id of owner                                                              |
+| type                      | string   | [server type](#server-type)                                              |
+| isInNetwork               | boolean  | true if the server is in modded network                                  |
+| accessType                | string   | [server Access Type](#server-access-type)                                |
+| status                    | string   | approximate number of online players in this server                      |
+| onlinePlayers             | integer  | approximate number of online players in this server                      |
+| isExpired                 | boolean  | this server is expired                                                   |
+| expireTime                | long     | server expiration date (UNIX time)                                       |
 
 #### Server Type
 
@@ -29,11 +29,11 @@
 
 #### Server Access Type
 
-| VALUE     | DESCRIPTION |
-|:----------|:------------|
-| OFFICIAL  | Modded Official server |
+| VALUE     | DESCRIPTION                                        |
+|:----------|:---------------------------------------------------|
+| OFFICIAL  | Modded Official server                             |
 | PRIVATE   | Access is restricted to only members of the server |
-| PUBLIC    | Access is unrestricted |
+| PUBLIC    | Access is unrestricted                             |
 
 #### Example Server
 
