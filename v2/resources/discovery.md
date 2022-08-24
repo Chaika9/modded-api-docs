@@ -10,7 +10,7 @@
 ## Get Servers Discovery
 **GET** `/discoverable-servers`
 
-Returns a list of partial [server](/resources/server?id=server-object) objects user from the selected category.
+Returns a list of partial [server](/v2/resources/server?id=server-object) objects user from the selected category.
 
 #### Query String Params
 

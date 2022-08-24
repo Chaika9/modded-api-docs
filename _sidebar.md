@@ -6,7 +6,6 @@
     - [User](v1/resources/user.md)
 - Modded V2
   - Resources
-    - [Application](v2/resources/application.md)
     - [Discovery](v2/resources/discovery.md)
     - [Server](v2/resources/server.md)
     - [User](v2/resources/user.md)

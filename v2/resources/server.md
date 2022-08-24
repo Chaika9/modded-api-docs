@@ -64,7 +64,7 @@
 
 | FIELD                     | TYPE                                           | DESCRIPTION                           |
 |:--------------------------|:-----------------------------------------------|:--------------------------------------|
-| user?                     | [user](/resources/user?id=user-object) object | the user this server member represents |
+| user?                     | [user](/v2/resources/user?id=user-object) object | the user this server member represents |
 
 ## Get Server
 **GET** `/servers/{server.id}`

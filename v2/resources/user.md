@@ -65,7 +65,7 @@ Modify the requester's user account settings. Returns a [user](#user-object) obj
 ## Get User Servers
 **GET** `/users/@me/servers`
 
-Returns a list of partial [server](/resources/server?id=server-object) objects user is a owner of.
+Returns a list of partial [server](/v2/resources/server?id=server-object) objects user is a owner of.
 
 #### Example Partial Server
 
@@ -113,7 +113,7 @@ Decline a friend request from a user. Returns a `204 No Content` on success.
 ## Get User Friends Servers
 **GET** `/users/@me/friends/servers`
 
-Returns a list of partial [server](/resources/server?id=server-object) objects user is a access of.
+Returns a list of partial [server](/v2/resources/server?id=server-object) objects user is a access of.
 
 #### Example Partial Server
 
